@@ -1,6 +1,6 @@
 db.produtos.find(
   {
-    ingredientes: { $elemMatch: { $eq: "picles" } },
+    ingredientes: { $all: ["picles"] },
   },
   {
     _id: 0,
