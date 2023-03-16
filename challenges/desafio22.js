@@ -1,18 +1,19 @@
-db.produtos.updatemany(
+db.produtos.updateMany(
   {},
   { $set: {
       vendasPorDia: [0, 0, 0, 0, 0, 0, 0],
     },
   },
+  { upsert: true },
 );
-db.produtos.updatemany(
+db.produtos.updateMany(
   { nome: "Big Mac" },
   { $inc: {
       "vendasPorDia.3": 60,
     },
   },
 );
-db.produtos.updatemany(
+db.produtos.updateMany(
   { tags: { $all: ["bovino"] } },
   { $inc: {
       "vendasPorDia.6": 120,
