@@ -20,9 +20,10 @@ Projeto realizado durante módulo de Back-end do curso de desenvolvimento web da
 
   **:warning: Antes de começar, seu docker-compose precisa estar na versão 1.29 ou superior. [Veja aqui](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-20-04-pt) ou [na documentação](https://docs.docker.com/compose/install/) como instalá-lo. No primeiro artigo, você pode substituir onde está com `1.26.0` por `1.29.2`.**
 
-- [ ] `docker run -d --name=mongo-commmerce -v "$PWD:/app" -p 27017:27017 mongo:5.0`
-- [ ] Instale a extensão do MongoDb e no seu vscode
-- [ ] Abra o Playgroud do MongoDb e cole as queries que estão nos arquivos challenges/
+- [ ] `docker run -d --name=mongo-commerce -v "$PWD:/app" -p 27017:27017 mongo:5.0`
+- [ ] `docker exec -it mongo-commerce bash`
+- [ ] `cd app/`
+- [ ] `mongorestore -d commerce -c produtos assets/produtos/produtos.bson`
 
 **Localmente:**
 
